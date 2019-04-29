@@ -3,9 +3,9 @@
 
 Hello friend,
 
-We are super excited that you want to be part of the Product Security team at Zendesk. 
+We are super excited that you want to be part of the Product Security team at Zendesk.
 
-** To get started, you need to fork this repository to your own Github profile and work off that copy. **
+**To get started, you need to fork this repository to your own Github profile and work off that copy.**
 
 In this repository, there are the following files:
 1. README.md - this file
