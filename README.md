@@ -3,7 +3,11 @@
 
 Hello friend,
 
-We are super excited that you want to be part of the Product Security team at Zendesk. To get started, you need to fork this repository to your own Github profile and work off that copy. In this repository, there are the following files:
+We are super excited that you want to be part of the Product Security team at Zendesk. 
+
+** To get started, you need to fork this repository to your own Github profile and work off that copy. **
+
+In this repository, there are the following files:
 1. README.md - this file
 2. project/ - the folder containing all the files that you require to get started
 3. project/index.html - the main HTML file containing the login form
