@@ -27,6 +27,6 @@ As part of the challenge, you need to implement an authentication mechanism with
 10. HTTPS
 11. Known password check
 
-You will have to create a simple binary (platform of your choice) to provide any server side functionality you may require. Please document steps to run the application in your submission.
+You will have to create a simple binary (platform of your choice) to provide any server side functionality you may require. Please document steps to run the application in your submission. Your submission should be a link to your Github repository which you've already forked earlier.
 
 Thank you!
