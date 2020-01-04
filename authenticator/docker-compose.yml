@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file: .env
+    environment:
+      POSTGRESQL_HOST: postgres
+      POSTGRESQL_PORT: 5432
+    depends_on:
+      - postgres
+    volumes:
+      - ./:/srv
+  postgres:
+    image: postgres:11.6
+    expose:
+      - "5432"
+    env_file: .env
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
