@@ -8,13 +8,10 @@ RUN apk update && \
   apk add postgresql-client libpq postgresql-dev nodejs build-base tzdata yarn && \
   rm -rf /var/cache/apk/*
 
-COPY ./Gemfile* package.json yarn.lock /srv/
+COPY ./Gemfile* /srv/
 RUN gem install bundler
 WORKDIR /srv
-RUN bundle install && yarn install
-
-COPY . /srv/
-RUN chown -R app:app /srv
+RUN bundle install
 
 USER app
 
