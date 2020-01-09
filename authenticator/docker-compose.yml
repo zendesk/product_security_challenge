@@ -21,6 +21,12 @@ services:
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
+  mailcatcher:
+    image: kiesia/mailcatcher:latest
+    ports:
+      - "1080:1080"
+    expose:
+      - "1025"
 
 volumes:
   postgres_data:
