@@ -7,6 +7,8 @@ ruby '2.6.5'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'pg', '~> 1.2', '>= 1.2.1'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'lograge', '~> 0.11.2'
+gem 'logstash-event', '~> 1.2', '>= 1.2.02'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -25,6 +27,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.9'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'pry-rails', '~> 0.3.9'
 end
 
 group :development do
