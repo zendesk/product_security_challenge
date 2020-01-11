@@ -10,10 +10,10 @@ feature "Authentication logging", type: :feature do
   context "on authentication" do
     it "logs the login" do
       expect(Rails.logger).to receive(:info).with(hash_including(
-        "message" => "Successful login",
-        "uid" => user.id,
-        "remote_ip" => "127.0.0.1"
-      ))
+                                                    "message" => "Successful login",
+                                                    "uid" => user.id,
+                                                    "remote_ip" => "127.0.0.1"
+                                                  ))
 
       visit "/users/sign_in"
       fill_in "user[email]", with: user.email
@@ -25,10 +25,10 @@ feature "Authentication logging", type: :feature do
   context "on failed login" do
     it "logs the attempt with user id" do
       expect(Rails.logger).to receive(:info).with(hash_including(
-        "message" => "Login failure",
-        "uid" => user.id,
-        "remote_ip" => "127.0.0.1"
-      ))
+                                                    "message" => "Login failure",
+                                                    "uid" => user.id,
+                                                    "remote_ip" => "127.0.0.1"
+                                                  ))
 
       visit "/users/sign_in"
       fill_in "user[email]", with: user.email
@@ -40,9 +40,9 @@ feature "Authentication logging", type: :feature do
   context "on failed login with unknown account" do
     it "logs the attempt with email" do
       expect(Rails.logger).to receive(:info).with(hash_including(
-        "message" => "Login failure: unknown account - bogu5@example.com",
-        "remote_ip" => "127.0.0.1"
-      ))
+                                                    "message" => "Login failure: unknown account - bogu5@example.com",
+                                                    "remote_ip" => "127.0.0.1"
+                                                  ))
 
       visit "/users/sign_in"
       fill_in "user[email]", with: "bogu5@example.com"
@@ -54,9 +54,9 @@ feature "Authentication logging", type: :feature do
   context "on login without email" do
     it "logs the attempt" do
       expect(Rails.logger).to receive(:info).with(hash_including(
-        "message" => "Login failure: malformed request - missing email",
-        "remote_ip" => "127.0.0.1"
-      ))
+                                                    "message" => "Login failure: malformed request - missing email",
+                                                    "remote_ip" => "127.0.0.1"
+                                                  ))
 
       visit "/users/sign_in"
       click_on "Log in"

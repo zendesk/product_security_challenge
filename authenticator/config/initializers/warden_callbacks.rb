@@ -1,4 +1,4 @@
-Warden::Manager.after_authentication do |user, auth, opts|
+Warden::Manager.after_authentication do |user, auth, _opts|
   event = LogStash::Event.new(
     message: "Successful login",
     uid: user.id,
@@ -8,7 +8,7 @@ Warden::Manager.after_authentication do |user, auth, opts|
   Rails.logger.info event
 end
 
-Warden::Manager.before_failure do |user, auth, opts|
+Warden::Manager.before_failure do |user, _auth, _opts|
   request = Rack::Request.new(user)
 
   if request.params["user"] && request.params["user"]["email"]
