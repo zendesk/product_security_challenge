@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "User authentication", type: :feature do
+feature "Dashboard", type: :feature do
   let(:user) { create(:user) }
 
   context "when unauthenticated" do
