@@ -5,7 +5,7 @@ RUN addgroup --gid 1000 app && \
 
 RUN apk update && \
   apk upgrade && \
-  apk add postgresql-client libpq postgresql-dev nodejs build-base tzdata yarn && \
+  apk add postgresql-client libpq postgresql-dev nodejs build-base tzdata yarn less && \
   rm -rf /var/cache/apk/*
 
 COPY ./Gemfile* /srv/
