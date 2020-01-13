@@ -42,7 +42,7 @@ Implementation is made a bit easier due to hosting dependencies locally.
 ### Secure Headers
 
 Rails 6 provides some pretty sensible headers [by default](https://edgeguides.rubyonrails.org/security.html#default-headers).
-The only change I've made is setting `X-Frame-Options` to `deny`.
+The only change I've made is [setting](authenticator/config/application.rb#L23) `X-Frame-Options` to `deny`.
 
 ## Features
 
