@@ -35,5 +35,7 @@
 yarn-debug.log*
 .yarn-integrity
 
-# Ignore Docker env file
+# Docker secrets
+/docker/localhost.crt
+/docker/localhost.key
 .env

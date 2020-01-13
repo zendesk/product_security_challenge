@@ -16,4 +16,7 @@ test :
 push:
 	docker push ${IMG}
 
+restart :
+	touch tmp/restart.txt
+
 .PHONY: test
