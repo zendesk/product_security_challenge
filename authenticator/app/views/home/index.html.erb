@@ -1,3 +1,17 @@
-<h1>Oh Hi There! &#x1f44b;</h1>
-<p>You are logged in as <%= mail_to current_user.email %>.</p>
-<p><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Oh Hi There! &#x1f44b;</h1>
+    <p>You are logged in as <%= mail_to current_user.email %>.</p>
+
+    <% if current_user.confirmed? %>
+      <p>Your email has been <strong>confirmed</strong>.</p>
+    <% else %>
+      <p>Your email is <strong>unconfirmed</strong> - please check your email inbox for
+      instructions.</p>
+
+      <p>If you did not receive confirmation instructions, then you can
+      <%= link_to("resend the confirmation email", user_confirmation_path(user: { email: current_user.email }), method: :post) %>.</p>
+    <% end %>
+    <p><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p>
+  </div>
+</div>
