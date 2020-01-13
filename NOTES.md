@@ -44,7 +44,7 @@ Implementation is made a bit easier due to hosting dependencies locally.
 Rails 6 provides some pretty sensible headers [by default](https://edgeguides.rubyonrails.org/security.html#default-headers).
 The only change I've made is [setting](authenticator/config/application.rb#L23) `X-Frame-Options` to `deny`.
 
-## Features
+## Auth Features
 
 ### Input sanitization and validation
 
@@ -119,3 +119,12 @@ email address.
 
 A dockerized NGINX container provides a HTTPS proxy for the app. HTTPS is using a simple self-signed certificate. 
 Using HTTPS in dev enables us to check for a number of issues and features, such as CSP, cookie flags, and mixed content.
+
+## Additional Work
+
+I ran out of time to implement more of the features in the list. Additionally to the list, I would have also have liked
+to implement:
+
+ - [`Rack::Attack`](https://github.com/kickstarter/rack-attack) for rate limiting and blocking of malicious requests.
+ - More security focused specs. The focus of this app is on configuration. In a real app, specs provide a vital safety net
+   for security regressions.
