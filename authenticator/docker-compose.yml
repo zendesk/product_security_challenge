@@ -5,8 +5,8 @@ services:
     build: .
     stdin_open: true
     tty: true
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     env_file: .env
     environment:
       POSTGRESQL_HOST: postgres
@@ -15,12 +15,22 @@ services:
       - postgres
     volumes:
       - ./:/srv
+  nginx:
+    image: nginx:1.17-alpine
+    ports:
+      - "1443:1443"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/localhost.crt:/etc/nginx/localhost.crt
+      - ./docker/localhost.key:/etc/nginx/localhost.key
+      - ./docker/dhparam.pem:/etc/nginx/dhparam.pem
+    depends_on:
+      - app
   postgres:
     image: postgres:11.6
     expose:
       - "5432"
     env_file: .env
-    restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
   mailcatcher:
