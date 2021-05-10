@@ -1,32 +1,21 @@
-# Zendesk Product Security
-### The Zendesk Product Security Challenge
+# The Zendesk Product Security Challenge
 
 Hello friend,
 
-We are super excited that you want to be part of the Product Security team at Zendesk.
+We are super excited that you want to be part of the Product Security team at Zendesk. **To get started, you need to fork this repository to your own GitHub profile and work off that copy.** 
 
-**To get started, you need to fork this repository to your own Github profile and work off that copy.**
+### The Challenge
 
-In this repository, there are the following files:
-1. README.md - this file
-2. project/ - the folder containing all the files that you require to get started
-3. project/index.html - the main HTML file containing the login form
-4. project/assets/ - the folder containing supporting assets such as images, JavaScript files, Cascading Style Sheets, etc. You shouldn’t need to make any changes to these but you are free to do so if you feel it might help your submission
+Implement an easy, secure authentication mechanism that allows users to:
+- Create an account
+- Log in and log out
+- Reset their password
 
-As part of the challenge, you need to implement an authentication mechanism with as many of the following features as possible. It is a non exhaustive list, so feel free to add or remove any of it as deemed necessary.
+We have created the basic boilerplate for you (which you are free to modify) and it is up to you to implement the server-side functionality and expand from there. There is no restriction on language, frameworks or implementation, however we ask that: 
+- You consider the security challenges that come with any authentication mechanism and implement controls to protect against common attacks.
+- You document the controls you have implemented and come to your interview prepared to justify these decisions.
+- Your submission is linked to your GitHub account (i.e. the forked repository you created) and contains all the source code and clear documentation on how to run the application (a dockerized, packaged, or compiled submission is welcome, but not essential). 
+- You have fun and hopefully learn something! Whilst we know this isn’t strictly a developer role, the ability to understand what goes into secure design and implementation is an important part of our job, The time it takes to complete this task is going to vary based on your previous experience, but we don’t want you up until 2am every night trying to get this done. What we are looking for is a submission that demonstrates your abilities and knowledge. 
+ 
+If you are having trouble, for whatever reason, please reach out to us! 
 
-1. Input sanitization and validation
-2. Password hashed
-3. Prevention of timing attacks
-4. Logging
-5. CSRF prevention
-6. Multi factor authentication
-7. Password reset / forget password mechanism
-8. Account lockout
-9. Cookie
-10. HTTPS
-11. Known password check
-
-You will have to create a simple binary (platform of your choice) to provide any server side functionality you may require. Please document steps to run the application. Your submission should be a link to your Github repository which you've already forked earlier together with the source code and binaries.
-
-Thank you!
